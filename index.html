@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/5655/5655165.png" alt="Sudoku Icon" class="game-icon">
+                <h1>Sudoku Master</h1>
+                <p class="subtitle">Challenge your mind!</p>
+            </div>
+        </header>
+
+        <div class="game-controls">
+            <div class="stats">
+                <span id="timer">00:00</span>
+                <span id="puzzles-solved">Puzzles Solved: 0</span>
+            </div>
+            <div class="buttons">
+                <button id="new-game">New Game</button>
+                <button id="check-solution">Check Solution</button>
+                <button id="reset">Reset</button>
+                <button id="hint">Hint</button>
+                <button id="difficulty">Difficulty: Medium</button>
+            </div>
+        </div>
+
+        <div class="sudoku-container">
+            <div id="sudoku-board"></div>
+        </div>
+
+        <div class="modal" id="reset-modal">
+            <div class="modal-content">
+                <p>Are you sure you want to reset the current puzzle?</p>
+                <div class="modal-buttons">
+                    <button id="confirm-reset">Yes</button>
+                    <button id="cancel-reset">No</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="success-modal">
+            <div class="modal-content">
+                <p>Congratulations! You solved the puzzle!</p>
+                <p id="completion-time">Time: 00:00</p>
+                <button id="close-success">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
